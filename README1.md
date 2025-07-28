@@ -1,15 +1,15 @@
-# MetaSniff: Image and Document Metadata Extractor 🕵️‍♂️📄🖼️
+# Image and Document Metadata Extractor :-
 
 MetaSniff is a lightweight Python tool designed for **ethical metadata extraction** from common image and document formats.  
 It helps identify hidden or embedded information in files—useful for cybersecurity, audits, digital forensics, or even fun fact-checking!
 
-## 🔍 What It Does
+##  What It Does ?
 
 - Extracts **EXIF metadata** from `.jpg`, `.jpeg`, `.png` images
 - Pulls **document properties** from `.pdf` files (author, title, creation date, etc.)
 - Retrieves **Word doc info** from `.docx` (title, author, revision history, etc.)
 
-## ✅ Supported File Types
+##  Supported File Types :-
 
 | Type     | Extensions         | Metadata Extracted |
 |----------|--------------------|---------------------|
@@ -17,7 +17,7 @@ It helps identify hidden or embedded information in files—useful for cybersecu
 | PDF      | .pdf               | Document properties |
 | Word     | .docx              | Core file metadata  |
 
-## 🚀 How to Run (VS Code or Local)
+##  How to Run (VS Code or Local) :-
 
 1. Clone this repo:
 ```bash
@@ -34,15 +34,15 @@ pip install -r requirements.txt
 
 3. Run the script from terminal or inside your IDE.
 
-## 👨‍🏫 Educational Use Cases
+## Educational Use Cases :-
 
-- Digital forensics practice 🧠  
-- Metadata redaction before uploading 🔐  
-- Building blocks for automation or compliance tools 💼  
+- Digital forensics practice  
+- Metadata redaction before uploading   
+- Building blocks for automation or compliance tools   
 
-## ⚠️ Ethical Use Only
+##  Ethical Use Only :-
 
 Please use this tool only on files **you own or have permission to analyze**. Unauthorized extraction may violate privacy or legal boundaries.
 
 ---
-Made with ❤️ by Omii | Powered by Python 🐍
+Made by Om Ganechari | Powered by Python 
