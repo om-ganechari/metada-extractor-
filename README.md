@@ -38,7 +38,16 @@ pip install -r requirements.txt
 
 - Digital forensics practice  
 - Metadata redaction before uploading   
-- Building blocks for automation or compliance tools  
+- Building blocks for automation or compliance tools
+
+  # full project structure :
+
+  metadata extractor/
+├── app.py                  # your streamlit script
+├── requirements.txt        # tells Streamlit what to install
+├── README.md               # your beautiful pitch
+├── LICENSE                 # add MIT license 
+
 
 # Ethical Use Only :
 
