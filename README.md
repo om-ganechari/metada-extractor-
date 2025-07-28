@@ -62,6 +62,15 @@ Curious how works in action?
 
 See how you can extract metadata from images and documents in seconds using Python and Google Colab!
 
+# Try the Live Demo :
+
+Click below to run the app online (powered by Streamlit):
+
+ link - https://34kyvyc8gecrxzsngdry6u.streamlit.app/
+
+
+
+
 ---
 
  Author :
