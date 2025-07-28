@@ -1,0 +1,74 @@
+# metadata extraction for images , pdf file , word file
+!pip install Pillow PyPDF2 python-docx --quiet
+
+
+from PIL import Image
+from PIL.ExifTags import TAGS
+from PyPDF2 import PdfReader
+from docx import Document
+import os
+
+
+
+def extract_image_metadata(file_path):
+    metadata = {}
+    try:
+        image = Image.open(file_path)
+        info = image._getexif()
+        if info:
+            for tag, value in info.items():
+                tagname = TAGS.get(tag, tag)
+                metadata[tagname] = value
+        else:
+            metadata['Info'] = "No metadata found"
+    except Exception as e:
+        metadata['Error'] = str(e)
+    return metadata
+
+def extract_pdf_metadata(file_path):
+    metadata = {}
+    try:
+        reader = PdfReader(file_path)
+        doc_info = reader.metadata
+        for key, value in doc_info.items():
+            metadata[key] = str(value)
+    except Exception as e:
+        metadata['Error'] = str(e)
+    return metadata
+
+def extract_docx_metadata(file_path):
+    metadata = {}
+    try:
+        doc = Document(file_path)
+        props = doc.core_properties
+        for prop in dir(props):
+            if not prop.startswith("_") and not callable(getattr(props, prop)):
+                value = getattr(props, prop)
+                if value:
+                    metadata[prop] = str(value)
+    except Exception as e:
+        metadata['Error'] = str(e)
+    return metadata
+
+def detect_and_extract(file_path):
+    ext = os.path.splitext(file_path)[1].lower()
+    if ext in [".jpg", ".jpeg", ".png"]:
+        return extract_image_metadata(file_path)
+    elif ext == ".pdf":
+        return extract_pdf_metadata(file_path)
+    elif ext == ".docx":
+        return extract_docx_metadata(file_path)
+    else:
+        return {"Error": "Unsupported file format ::"}
+
+
+from google.colab import files
+uploaded = files.upload()
+
+
+for file_name in uploaded.keys():
+    print(f"\n Processing File: {file_name}")
+    metadata = detect_and_extract(file_name)
+    print("All Extracted Metadata:")
+    for key, value in metadata.items():
+        print(f"{key}: {value}")
