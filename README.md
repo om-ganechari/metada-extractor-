@@ -45,4 +45,19 @@ pip install -r requirements.txt
 Please use this tool only on files **you own or have permission to analyze**. Unauthorized extraction may violate privacy or legal boundaries.
 
 ---
-Made by Om Ganechari  | Powered by Python 
+
+# Demo Video :
+
+Curious how works in action?  
+📽️ [Click here to watch the demo](https://drive.google.com/file/d/1BiYhHKzXBe8P4lt2dUAMIvwcaCa-oO7-/view?usp=drive_link)
+
+See how you can extract metadata from images and documents in seconds using Python and Google Colab!
+
+---
+
+ Author :
+Om Nitendra Ganechari
+ AI & Data Science | Cybersecurity Intern
+🔗 www.linkedin.com/in/om-ganechari-24a928272
+--
+
